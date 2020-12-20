@@ -1,0 +1,18 @@
+%nav.navbar.navbar-expand-md.fixed-top.navbar-dark.bg-dark
+  %a.navbar-brand{:href => "#"} Open Vagas
+  %button.navbar-toggler.p-0.border-0{"data-toggle" => "offcanvas", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => root_path}
+          Inicio
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "#"} Login/Cadastro
+      // %li.nav-item.dropdown
+      //   %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"} Settings
+      //   .dropdown-menu{"aria-labelledby" => "dropdown01"}
+      //     %a.dropdown-item{:href => "#"} Action
+      //     %a.dropdown-item{:href => "#"} Another action
+      //     %a.dropdown-item{:href => "#"} Something else here
