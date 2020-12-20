@@ -1,0 +1,12 @@
+%h1.h3.mb-3.font-weight-normal.title{:style => "text-align: center"} Trocar senha
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+  = f.error_notification
+  = f.input :reset_password_token, as: :hidden
+  = f.full_error :reset_password_token
+  .form-inputs
+    = f.input :password, label: "Nova senha", required: true, autofocus: true, hint: ("#{@minimum_password_length} caracteres minimo" if @minimum_password_length), input_html: { autocomplete: "new-password" }
+    = f.input :password_confirmation, label: "Confirme a nova senha", required: true, input_html: { autocomplete: "new-password" }
+  .form-actions
+    = f.button :submit, "Alterar senha", class: 'btn btn-primary btn-block'
+  %hr
+  = render "devise/shared/links"
