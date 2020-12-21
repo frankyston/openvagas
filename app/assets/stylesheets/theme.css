@@ -5,6 +5,7 @@ body {
 
 body {
   padding-top: 56px;
+  background-color: #f5f7fb !important;
 }
 
 @media (max-width: 767.98px) {
@@ -78,3 +79,24 @@ body {
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
+
+.container {
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px #888;
+  margin: 20px auto 20px auto;
+}
+
+footer {
+  background: white;
+  padding: 10px 0px;
+  margin: auto;
+  text-align: center;
+}
+
+footer p {
+  margin: 0px;
+  line-height: 30px;
+}

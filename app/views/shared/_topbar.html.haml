@@ -8,13 +8,13 @@
         %a.nav-link{:href => root_path}
           Inicio
           %span.sr-only (current)
-      %li.nav-item.active
-        %a.nav-link{:href => dynamic_url_company}
-          Minha Empresa
       - unless user_signed_in?
         %li.nav-item
           = link_to 'Login/Cadastro', new_user_session_path, class: 'nav-link'
       - if user_signed_in?
+        %li.nav-item.active
+          %a.nav-link{:href => dynamic_url_company}
+            Minha Empresa
         %li.nav-item.dropdown
           %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#"} Settings
           .dropdown-menu{"aria-labelledby" => "dropdown01"}
