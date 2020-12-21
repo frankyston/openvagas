@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      company: Empresa
+    attributes:
+      company:
+        name: Nome da empresa
+        url: Site da empresa
+        logo: Logo da Empresa

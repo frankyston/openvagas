@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'haml'
 gem "haml-rails", "~> 2.0"
+#gem 'image_processing'
 
 #gem 'kaminari'
 #gem 'kaminari-bootstrap'

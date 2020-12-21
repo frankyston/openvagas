@@ -9,7 +9,7 @@
           Inicio
           %span.sr-only (current)
       %li.nav-item.active
-        %a.nav-link{:href => root_path}
+        %a.nav-link{:href => dynamic_url_company}
           Minha Empresa
       - unless user_signed_in?
         %li.nav-item
