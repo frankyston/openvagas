@@ -50,22 +50,24 @@ class PositionsController < ApplicationController
   end
 
   def set_i18n_careers
-    @careers = []
-    Position.careers.each_with_index do |career, index|
-      @careers << [
-        Position.careers.to_a[index].first,
-        I18n.t('activerecord.attributes.position.careers').values.to_a[index]
-      ]
-    end
+    @careers = I18n.t('activerecord.attributes.position.careers')
+    # @careers = []
+    # Position.careers.each_with_index do |career, index|
+    #   @careers << [
+    #     Position.careers.to_a[index].first,
+    #     I18n.t('activerecord.attributes.position.careers').values.to_a[index]
+    #   ]
+    # end
   end
 
   def set_i18n_contracts
-    @contracts = []
-    Position.contracts.each_with_index do |career, index|
-      @contracts << [
-        Position.contracts.to_a[index].first,
-        I18n.t('activerecord.attributes.position.contracts').values.to_a[index]
-      ]
-    end
+    @contracts = I18n.t('activerecord.attributes.position.contracts')
+    # @contracts = []
+    # Position.contracts.each_with_index do |career, index|
+    #   @contracts << [
+    #     Position.contracts.to_a[index].first,
+    #     I18n.t('activerecord.attributes.position.contracts').values.to_a[index]
+    #   ]
+    # end
   end
 end
