@@ -6,6 +6,10 @@
   = f.input :publish
   = f.input :city
   = f.input :state
-  = f.input :summary
-  = f.input :description
+  = f.input :summary, maxlength: 360, input_html: { class: 'count-textarea', rows: 4 }
+  #the-count
+    %span#current 0
+    %span#maximun / 360
+  %label Descrição
+  = f.rich_text_area :description
   = f.button :submit, class: 'btn btn-primary'
