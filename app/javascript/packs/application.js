@@ -25,3 +25,14 @@ $(function () {
     $('.offcanvas-collapse').toggleClass('open')
   })
 })
+
+require("trix")
+require("@rails/actiontext")
+
+$(document).ready(function(){
+  $('#current').text($('.count-textarea').val().length);
+  $('.count-textarea').keyup(function(){
+    var characterCount = $(this).val().length;
+    $('#current').text(characterCount);
+  });
+});

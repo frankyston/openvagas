@@ -1,0 +1,19 @@
+.card.card-position
+  .card-body
+    .container.conteiner-card
+      .row
+        .col-2
+          = image_tag position.company.logo, alt: "Logo marca da empresa #{position.company.name}", class: 'card-img-top'
+        .col-10
+          %h4= position.name
+          %h5= "#{I18n.t('activerecord.attributes.position.careers')[position.career.to_sym]} - #{position.city} - #{I18n.t('activerecord.attributes.position.contracts')[position.contract.to_sym]}"
+          %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia porro ab, nihil quis earum ratione repudiandae, ipsam neque quidem iusto commodi ipsum dolor cumque repellat fugiat corporis voluptatibus eaque.
+          .row
+            .col-sm.mt-3
+              %button.btn.btn-danger{:type => "button"} Ver mais
+              %button.btn.btn-success{:type => "button"} Candidatar-se
+            .col-sm.text-right.mt-3.group-social-network
+              = link_to image_tag('social-network/linkedin.svg', alt: 'Icone do LinkedIn', height: '32', width: '32'), "https://www.linkedin.com/sharing/share-offsite/?url=url"
+              = link_to image_tag('social-network/whatsapp.svg', alt: 'Icone do Whatsapp', height: '32', width: '32'), "https://wa.me/?text=A empresa #{position.company.name} em #{position.city} está com a vaga de #{position.name}. Veja mais detalhes no nosso mural! url"
+              = link_to image_tag('social-network/twitter.svg', alt: 'Icone do Twitter', height: '32', width: '32'), "https://twitter.com/intent/tweet?text=A empresa #{position.company.name} em #{position.city} está com a vaga de #{position.name}. Veja mais detalhes no nosso mural! url"
+              = link_to image_tag('social-network/copy.svg', alt: 'Icone do copiar', height: '32', width: '32', class: 'share-copy-icon'), '#'
