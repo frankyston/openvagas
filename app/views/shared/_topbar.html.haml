@@ -19,3 +19,6 @@
           %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#"} Settings
           .dropdown-menu{"aria-labelledby" => "dropdown01"}
             = link_to('Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item')
+        %li.nav-item
+          %a.nav-link.public-position{:href => new_position_path}
+            Publicar vaga

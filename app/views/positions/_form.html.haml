@@ -1,0 +1,11 @@
+= simple_form_for @position do |f|
+  = f.input :name
+  = f.input :career, as: :select, collection: @careers, label_method: :second, value_method: :first, include_blank: false, selected: @position.career
+  = f.input :contract, as: :select, collection: @contracts, label_method: :second, value_method: :first, include_blank: false, selected: @position.contract
+  = f.input :remote
+  = f.input :publish
+  = f.input :city
+  = f.input :state
+  = f.input :summary
+  = f.input :description
+  = f.button :submit, class: 'btn btn-primary'
