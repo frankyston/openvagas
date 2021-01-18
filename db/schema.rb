@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 2021_01_09_022356) do
     t.string "city"
     t.string "state"
     t.text "summary"
+    t.text "description"
     t.boolean "publish"
     t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
