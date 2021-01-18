@@ -1,6 +1,6 @@
 %header.text-center
   %h1 Open Vagas
-  %p Mural de vagas compartilhadas pela comunidade.
+  %p= t(:home_description)
 
 %form
   .row
@@ -14,10 +14,10 @@
       %label Local de trabalho
       %input.form-control{:placeholder => "Last name", :type => "text"}/
     .col-sm
-      %button.btn.btn-danger{:type => "submit", style: 'margin-top: 31px;'} Pesquisar
+      %button.btn.btn-danger{:type => "submit", style: 'margin-top: 31px;'}= t(:submit)
 
 - @positions.each do |position|
   = render position
 
 %p.d-block.text-center.mt-3
-  %a{:href => "#"} Paginação
+  %a{:href => "#"}= t(:pagination)
