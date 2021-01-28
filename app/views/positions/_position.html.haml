@@ -13,7 +13,7 @@
               %button.btn.btn-danger{:type => "button"} Ver mais
               %button.btn.btn-success{:type => "button"} Candidatar-se
             .col-sm.text-right.mt-3.group-social-network
-              = link_to image_tag('social-network/linkedin.svg', alt: 'Icone do LinkedIn', height: '32', width: '32'), "https://www.linkedin.com/sharing/share-offsite/?url=url"
-              = link_to image_tag('social-network/whatsapp.svg', alt: 'Icone do Whatsapp', height: '32', width: '32'), "https://wa.me/?text=A empresa #{position.company.name} em #{position.city} está com a vaga de #{position.name}. Veja mais detalhes no nosso mural! url"
-              = link_to image_tag('social-network/twitter.svg', alt: 'Icone do Twitter', height: '32', width: '32'), "https://twitter.com/intent/tweet?text=A empresa #{position.company.name} em #{position.city} está com a vaga de #{position.name}. Veja mais detalhes no nosso mural! url"
-              = link_to image_tag('social-network/copy.svg', alt: 'Icone do copiar', height: '32', width: '32', class: 'share-copy-icon'), '#'
+              = link_to image_tag('social-network/linkedin.svg', alt: 'Icone do LinkedIn', height: '32', width: '32'), "https://www.linkedin.com/sharing/share-offsite/?url=#{url_position(position)}"
+              = link_to image_tag('social-network/whatsapp.svg', alt: 'Icone do Whatsapp', height: '32', width: '32'), "https://wa.me/?text=#{text_position(position)}"
+              = link_to image_tag('social-network/twitter.svg', alt: 'Icone do Twitter', height: '32', width: '32'), "https://twitter.com/intent/tweet?text=#{text_position(position)}"
+              = link_to image_tag('social-network/copy.svg', alt: 'Icone do copiar', height: '32', width: '32', class: 'share-copy-icon'), '#', class: 'copy-url', data: { 'clipboard-text': url_position(position) }

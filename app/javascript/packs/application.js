@@ -30,9 +30,18 @@ require("trix")
 require("@rails/actiontext")
 
 $(document).ready(function(){
-  $('#current').text($('.count-textarea').val().length);
-  $('.count-textarea').keyup(function(){
-    var characterCount = $(this).val().length;
-    $('#current').text(characterCount);
-  });
+  if ($('.count-textarea').length > 0) {
+    $('#current').text($('.count-textarea').val().length);
+    $('.count-textarea').keyup(function(){
+      var characterCount = $(this).val().length;
+      $('#current').text(characterCount);
+    });
+  }
+  
+  $('.copy-url').click(function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-clipboard-text');
+    navigator.clipboard.writeText(url);
+    alert('URL copiada com sucesso.')
+  })
 });
