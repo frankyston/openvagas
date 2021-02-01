@@ -133,3 +133,8 @@ footer p {
 .conteiner-card {
   box-shadow: 0px 0px 3px #888 !important;
 }
+
+.pagination {
+  align-items: center;
+  justify-content: center;
+}
