@@ -31,6 +31,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'rspec-rails'
+  gem 'solargraph'
 end
 
 group :development do
