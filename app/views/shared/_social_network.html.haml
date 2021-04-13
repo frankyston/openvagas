@@ -1,0 +1,5 @@
+
+= link_to image_tag('social-network/linkedin.svg', alt: 'Icone do LinkedIn', height: '32', width: '32'), "https://www.linkedin.com/sharing/share-offsite/?url=#{url_position(position)}"
+= link_to image_tag('social-network/whatsapp.svg', alt: 'Icone do Whatsapp', height: '32', width: '32'), "https://wa.me/?text=#{text_position(position)}"
+= link_to image_tag('social-network/twitter.svg', alt: 'Icone do Twitter', height: '32', width: '32'), "https://twitter.com/intent/tweet?text=#{text_position(position)}"
+= link_to image_tag('social-network/copy.svg', alt: 'Icone do copiar', height: '32', width: '32', class: 'share-copy-icon'), '#', class: 'copy-url', data: { 'clipboard-text': url_position(position) }
