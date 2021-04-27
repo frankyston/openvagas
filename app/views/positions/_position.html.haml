@@ -11,6 +11,8 @@
           .row
             .col-sm.mt-3
               = link_to 'Ver mais', public_position_path(position.slug), class: 'btn btn-danger'
-              = link_to 'Candidatar-se', public_position_path(position.slug), class: 'btn btn-success'
+              - if user_signed_in?
+                - if !UserApplicantQuery.new(current_user.id, position.id).call
+                  = link_to 'Candidatar-se', public_position_path(position.slug), class: 'btn btn-success'
             .col-sm.text-right.mt-3.group-social-network
               = render partial: 'shared/social_network', locals: {position: position}

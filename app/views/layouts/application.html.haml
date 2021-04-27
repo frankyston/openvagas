@@ -11,6 +11,7 @@
   %body
     = render 'shared/topbar'
     %main.container{:role => "main"}
+      = render partial: 'shared/flash_message'
       = yield
     %footer
       %p Sistema desenvolvido por Programador Showzim

@@ -36,7 +36,7 @@ class PositionsController < ApplicationController
 
   def public_position
     @position = Position.find_by(slug: params[:slug])
-    @applicant = current_user.applicants.new(position_id: @position.id)
+    @applicant = current_user.applicants.new(position_id: @position.id) if user_signed_in?
   end
 
   private
