@@ -1,17 +1,6 @@
 - if flash.present?
-  - if flash[:success].present?
-    - @icon = 'success'
-    - @title = 'Tudo certo!'
-    - @message = flash[:success]
-  - elsif flash[:error].present?
-    - @icon = 'error'
-    - @title = 'Erro!'
-    - @message = flash[:error]
-  - else
-    - @icon = 'success'
-    - @title = 'Alerta!'
-    - @message = flash[:notice]
-  
+  - @icon, @title, @message = show_message(flash)
+
   :javascript
     Swal.fire({
       title: "#{@title}",
