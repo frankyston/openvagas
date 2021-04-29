@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.2'
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -22,7 +22,6 @@ gem "haml-rails", "~> 2.0"
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'ransack'
-#gem 'ransack'
 #gem 'select2-rails'
 
 group :development, :test do
