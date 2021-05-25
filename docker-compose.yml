@@ -1,0 +1,29 @@
+version: "2"
+services:
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/usr/src/openvagas
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    env_file: .env.development
+    environment:
+      RAILS_ENV: development
+    depends_on:
+      - db
+  db:
+    image: postgres:13.2-alpine
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+volumes:
+  postgresql:
