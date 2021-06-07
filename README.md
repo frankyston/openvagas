@@ -1,28 +1,66 @@
-# OPEN VAGAS
+# README
 
-Durante o evento Ruby Summit Brasil ocorrido em dezembro de 2020, um dos patrocinadores fez um sistema de vagas para que as empresas que estivessem participando do evento divulgassem suas vagas lá em seu painel.
+Sistema Open Vagas
 
-Visto que o sistema todo foi feito em Ruby on Rails, isso me motivou a recriar esse sistema passo a passo ensinando em meu canal no Youtube.
+# Instalando Sistema
 
-Um disclaimer, a tela inicial será feita com layout do Bootstrap, uma vez que eu não tenho autorização para usar o design original. Dito isto, convido aqueles que quiserem contribuir com boas views dentro dos padrões de UI/UX a ficarem à vontade, pois eu não sou o cara do designer.
+1. Instalar o Docker
 
+2. Para executar o docker, primeiro precisa fazer a imagem do sistema localmente. 
+```
+docker-compose build
+```
 
-Things you may want to cover:
+3. Crie o arquivo `.env.development` na pasta raíz do projeto e dentro dele adicione as seguintes chaves:
 
-* Ruby version
+```
+DATABASE_URL_HOST=db
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=postgres
+```
 
-* System dependencies
+4. Crie o banco de dados, migração e seed: 
+```
+docker-compose run --rm app rails db:create
+```
+```
+docker-compose run --rm app rails db:migrate
+```
+```
+docker-compose run --rm app rails db:seed
+```
 
-* Configuration
+5. Execute o projeto com o comando 
+```
+docker-compose up -d
+```
 
-* Database creation
+6. Para parar os containers execute o comando na pasta do projeto 
+```
+docker-compose down
+```
 
-* Database initialization
+7. Para fazer live load e possíbilitar o `Binding.pry` no console faça os seguintes passos:
 
-* How to run the test suite
+- 7.1 Para listar todos os conteiners em execução:
+```
+docker ps
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+- 7.2 Para fazer o console do terminal ser o log do sistema, execute o comando abaixo e pegue o CONTAINER_ID do comando anterios (7.1)
+```
+docker attach CONTAINER_ID
+```
 
-* Deployment instructions
+- 7.3 Para parar o live load digite `ctrl+c` e o attach é encerrado.
+- 7.4 Passo a passo tirado deste gist [https://gist.github.com/briankung/ebfb567d149209d2d308576a6a34e5d8]
 
-* ...
+8. Para acessar o console do rails digite 
+```
+docker-compose run --rm app rails c
+```
+
+9. Para executar qualquer comando rails ou rake basta digitar 
+```
+docker-compose run --rm app COMANDO
+```
