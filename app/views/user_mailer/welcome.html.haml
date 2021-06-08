@@ -1,0 +1,342 @@
+!!!
+%html
+  %head
+    %title Open Vagas
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    :css
+      table[name="blk_permission"], table[name="blk_footer"] {display:none;}
+    %meta{:content => "noindex", :name => "googlebot"}/
+    %meta{:content => "NOINDEX, NOFOLLOW", :name => "ROBOTS"}/
+    %link{:href => "/style/dhtmlwindow.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/script/dhtmlwindow.js", :type => "text/javascript"}
+      :cdata
+    %link{:href => "/style/modal.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/script/modal.js", :type => "text/javascript"}
+    :javascript
+      function show_popup(popup_name,popup_url,popup_title,width,height) {var widthpx = width +  "px";var heightpx = height +  "px";emailwindow = dhtmlmodal.open(popup_name , 'iframe', popup_url , popup_title , 'width=' + widthpx + ',height='+ heightpx + ',center=1,resize=0,scrolling=1');}
+       function show_modal(popup_name,popup_url,popup_title,width,height){var widthpx = width +  "px";var heightpx = height +  "px";emailwindow = dhtmlmodal.open(popup_name , 'iframe', popup_url , popup_title , 'width=' + widthpx + ',height='+ heightpx + ',modal=1,center=1,resize=0,scrolling=1');}
+      var popUpWin=0;
+      	function popUpWindow(URLStr,PopUpName, width, height){if(popUpWin) { if(!popUpWin.closed) popUpWin.close();}var left = (screen.width - width) / 2;var top = (screen.height - height) / 2;popUpWin = open(URLStr, PopUpName,	'toolbar=0,location=0,directories=0,status=0,menub	ar=0,scrollbar=0,resizable=0,copyhistory=yes,width='+width+',height='+height+',left='+left+', 	top='+top+',screenX='+left+',screenY='+top+'');}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    :css
+      /*** BMEMBF Start ***/    
+      [name=bmeMainBody]{min-height:1000px;}    
+      @media only screen and (max-width: 480px){table.blk, table.tblText, .bmeHolder, .bmeHolder1, table.bmeMainColumn{width:100% !important;} }        
+      @media only screen and (max-width: 480px){.bmeImageCard table.bmeCaptionTable td.tblCell{padding:0px 20px 20px 20px !important;} }        
+      @media only screen and (max-width: 480px){.bmeImageCard table.bmeCaptionTable.bmeCaptionTableMobileTop td.tblCell{padding:20px 20px 0 20px !important;} }        
+      @media only screen and (max-width: 480px){table.bmeCaptionTable td.tblCell{padding:10px !important;} }        
+      @media only screen and (max-width: 480px){table.tblGtr{ padding-bottom:20px !important;} }        
+      @media only screen and (max-width: 480px){td.blk_container, .blk_parent, .bmeLeftColumn, .bmeRightColumn, .bmeColumn1, .bmeColumn2, .bmeColumn3, .bmeBody{display:table !important;max-width:600px !important;width:100% !important;} }        
+      @media only screen and (max-width: 480px){table.container-table, .bmeheadertext, .container-table { width: 95% !important; } }        
+      @media only screen and (max-width: 480px){.mobile-footer, .mobile-footer a{ font-size: 13px !important; line-height: 18px !important; } .mobile-footer{ text-align: center !important; } table.share-tbl { padding-bottom: 15px; width: 100% !important; } table.share-tbl td { display: block !important; text-align: center !important; width: 100% !important; } }        
+      @media only screen and (max-width: 480px){td.bmeShareTD, td.bmeSocialTD{width: 100% !important; } }        
+      @media only screen and (max-width: 480px){td.tdBoxedTextBorder{width: auto !important;}}    
+      @media only screen and (max-width: 480px){table.blk, table[name=tblText], .bmeHolder, .bmeHolder1, table[name=bmeMainColumn]{width:100% !important;} }    
+      @media only screen and (max-width: 480px){.bmeImageCard table.bmeCaptionTable td[name=tblCell]{padding:0px 20px 20px 20px !important;} }    
+      @media only screen and (max-width: 480px){.bmeImageCard table.bmeCaptionTable.bmeCaptionTableMobileTop td[name=tblCell]{padding:20px 20px 0 20px !important;} }    
+      @media only screen and (max-width: 480px){table.bmeCaptionTable td[name=tblCell]{padding:10px !important;} }    
+      @media only screen and (max-width: 480px){table[name=tblGtr]{ padding-bottom:20px !important;} }    
+      @media only screen and (max-width: 480px){td.blk_container, .blk_parent, [name=bmeLeftColumn], [name=bmeRightColumn], [name=bmeColumn1], [name=bmeColumn2], [name=bmeColumn3], [name=bmeBody]{display:table !important;max-width:600px !important;width:100% !important;} }    
+      @media only screen and (max-width: 480px){table[class=container-table], .bmeheadertext, .container-table { width: 95% !important; } }    
+      @media only screen and (max-width: 480px){.mobile-footer, .mobile-footer a{ font-size: 13px !important; line-height: 18px !important; } .mobile-footer{ text-align: center !important; } table[class="share-tbl"] { padding-bottom: 15px; width: 100% !important; } table[class="share-tbl"] td { display: block !important; text-align: center !important; width: 100% !important; } }    
+      @media only screen and (max-width: 480px){td[name=bmeShareTD], td[name=bmeSocialTD]{width: 100% !important; } }    
+      @media only screen and (max-width: 480px){td[name=tdBoxedTextBorder]{width: auto !important;}}    
+      @media only screen and (max-width: 480px){.bmeImageCard table.bmeImageTable{height: auto !important; width:100% !important; padding:20px !important;clear:both; float:left !important; border-collapse: separate;} }    
+      @media only screen and (max-width: 480px){.bmeMblInline table.bmeImageTable{height: auto !important; width:100% !important; padding:10px !important;clear:both;} }    
+      @media only screen and (max-width: 480px){.bmeMblInline table.bmeCaptionTable{width:100% !important; clear:both;} }    
+      @media only screen and (max-width: 480px){table.bmeImageTable{height: auto !important; width:100% !important; padding:10px !important;clear:both; } }    
+      @media only screen and (max-width: 480px){table.bmeCaptionTable{width:100% !important;  clear:both;} }    
+      @media only screen and (max-width: 480px){table.bmeImageContainer{width:100% !important; clear:both; float:left !important;} }    
+      @media only screen and (max-width: 480px){table.bmeImageTable td{padding:0px !important; height: auto; } }    
+      @media only screen and (max-width: 480px){td.bmeImageContainerRow{padding:0px !important;}}    
+      @media only screen and (max-width: 480px){img.mobile-img-large{width:100% !important; height:auto !important;} }    
+      @media only screen and (max-width: 480px){img.bmeRSSImage{max-width:320px; height:auto !important;}}    
+      @media only screen and (min-width: 640px){img.bmeRSSImage{max-width:600px !important; height:auto !important;} }    
+      @media only screen and (max-width: 480px){.trMargin img{height:10px;} }    
+      @media only screen and (max-width: 480px){div.bmefooter, div.bmeheader{ display:block !important;} }    
+      @media only screen and (max-width: 480px){.tdPart{ width:100% !important; clear:both; float:left !important; } }    
+      @media only screen and (max-width: 480px){table.blk_parent1, table.tblPart {width: 100% !important; } }    
+      @media only screen and (max-width: 480px){.tblLine{min-width: 100% !important;}}     
+      @media only screen and (max-width: 480px){.bmeMblCenter img { margin: 0 auto; } }       
+      @media only screen and (max-width: 480px){.bmeMblCenter, .bmeMblCenter div, .bmeMblCenter span  { text-align: center !important; text-align: -webkit-center !important; } }    
+      @media only screen and (max-width: 480px){.bmeNoBr br, .bmeImageGutterRow, .bmeMblStackCenter .bmeShareItem .tdMblHide { display: none !important; } }    
+      @media only screen and (max-width: 480px){.bmeMblInline table.bmeImageTable, .bmeMblInline table.bmeCaptionTable, td.bmeMblInline { clear: none !important; width:50% !important; } }    
+      @media only screen and (max-width: 480px){.bmeMblInlineHide, .bmeShareItem .trMargin { display: none !important; } }    
+      @media only screen and (max-width: 480px){.bmeMblInline table.bmeImageTable img, .bmeMblShareCenter.tblContainer.mblSocialContain, .bmeMblFollowCenter.tblContainer.mblSocialContain{width: 100% !important; } }    
+      @media only screen and (max-width: 480px){.bmeMblStack> .bmeShareItem{width: 100% !important; clear: both !important;} }    
+      @media only screen and (max-width: 480px){.bmeShareItem{padding-top: 10px !important;} }    
+      @media only screen and (max-width: 480px){.tdPart.bmeMblStackCenter, .bmeMblStackCenter .bmeFollowItemIcon {padding:0px !important; text-align: center !important;} }    
+      @media only screen and (max-width: 480px){.bmeMblStackCenter> .bmeShareItem{width: 100% !important;} }    
+      @media only screen and (max-width: 480px){ td.bmeMblCenter {border: 0 none transparent !important;}}    
+      @media only screen and (max-width: 480px){.bmeLinkTable.tdPart td{padding-left:0px !important; padding-right:0px !important; border:0px none transparent !important;padding-bottom:15px !important;height: auto !important;}}    
+      @media only screen and (max-width: 480px){.tdMblHide{width:10px !important;} }    
+      @media only screen and (max-width: 480px){.bmeShareItemBtn{display:table !important;}}    
+      @media only screen and (max-width: 480px){.bmeMblStack td {text-align: left !important;}}    
+      @media only screen and (max-width: 480px){.bmeMblStack .bmeFollowItem{clear:both !important; padding-top: 10px !important;}}    
+      @media only screen and (max-width: 480px){.bmeMblStackCenter .bmeFollowItemText{padding-left: 5px !important;}}    
+      @media only screen and (max-width: 480px){.bmeMblStackCenter .bmeFollowItem{clear:both !important;align-self:center; float:none !important; padding-top:10px;margin: 0 auto;}}    
+      @media only screen and (max-width: 480px){    
+      .tdPart> table{width:100% !important;}    
+      }    
+      @media only screen and (max-width: 480px){.tdPart>table.bmeLinkContainer{ width:auto !important; }}    
+      @media only screen and (max-width: 480px){.tdPart.mblStackCenter>table.bmeLinkContainer{ width:100% !important;}}     
+      .blk_parent:first-child, .blk_parent{float:left;}    
+      .blk_parent:last-child{float:right;}    
+      /*** BMEMBF END ***/    
+          
+      table[name="bmeMainBody"], body {background-color:#2f2f2f;}    
+       td[name="bmePreHeader"] {background-color:#00ae54;}    
+       td[name="bmeHeader"] {background:#ffffff;background-color:#00ae54;}    
+       td[name="bmeBody"], table[name="bmeBody"] {background-color:#ffffff;}    
+       td[name="bmePreFooter"] {background-color:#ffffff;}    
+       td[name="bmeFooter"] {background-color:#ffffff;}    
+       td[name="tblCell"], .blk {font-family:initial;font-weight:normal;font-size:initial;}    
+       table[name="blk_blank"] td[name="tblCell"] {font-family:Arial, Helvetica, sans-serif;font-size:14px;}    
+       [name=bmeMainContentParent] {border-color:#666666;border-width:0px;border-style:none;border-radius:0px;border-collapse:separate;border-spacing:0px;overflow:hidden;}    
+       [name=bmeMainColumnParent] {border-color:transparent;border-width:0px;border-style:none;border-radius:0px;}    
+       [name=bmeMainColumn] {border-color:transparent;border-width:0px;border-style:none;border-radius:0px;border-collapse:separate;border-spacing:0px;}    
+       [name=bmeMainContent] {border-color:transparent;border-width:0px;border-style:none;border-radius:0px;border-collapse:separate;border-spacing:0px;}
+  %body{:leftmargin => "0", :marginheight => "0", :marginwidth => "0", :style => "height: 100% !important; margin: 0; padding: 0; width: 100% !important;min-width: 100%;", :topmargin => "0"}
+    %table{:bgcolor => "#2f2f2f", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "bmeMainBody", :style => "background-color: rgb(47, 47, 47);", :width => "100%"}
+      %tbody
+        %tr
+          %td{:align => "center", :valign => "top", :width => "100%"}
+            %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "bmeMainColumnParentTable"}
+              %tbody
+                %tr
+                  %td{:name => "bmeMainColumnParent", :style => "border: 0px none transparent; border-radius: 0px; border-collapse: separate;"}
+                    %table.bmeHolder.bmeMainColumn{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "bmeMainColumn", :style => "max-width: 600px; border-radius: 0px; border-collapse: separate; border-spacing: 0px; overflow: visible;"}
+                      %tbody
+                        %tr
+                          %td.blk_container.bmeHolder{:align => "center", :bgcolor => "#00ae54", :name => "bmePreHeader", :style => "color: rgb(102, 102, 102); border: 0px none transparent; background-color: rgb(0, 174, 84);", :valign => "top", :width => "100%"}
+                        %tr
+                          %td.bmeHolder{:align => "center", :name => "bmeMainContentParent", :style => "border: 0px none rgb(102, 102, 102); border-radius: 0px; border-collapse: separate; border-spacing: 0px; overflow: hidden;", :valign => "top", :width => "100%"}
+                            %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "bmeMainContent", :style => "border-radius: 0px; border-collapse: separate; border-spacing: 0px; border: 0px none transparent;", :width => "100%"}
+                              %tbody
+                                %tr
+                                  %td.blk_container.bmeHolder{:align => "center", :bgcolor => "#00ae54", :name => "bmeHeader", :style => "color: rgb(56, 56, 56); border: 0px none transparent; background-color: rgb(0, 174, 84);", :valign => "top", :width => "100%"}
+                                    #dv_1.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_text", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %table.bmeContainerRow{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td.tdPart{:align => "center", :valign => "top"}
+                                                      %table.tblText{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "tblText", :style => "float:left; background-color:transparent;", :width => "600"}
+                                                        %tbody
+                                                          %tr
+                                                            %td.tblCell{:align => "left", :name => "tblCell", :style => "padding: 15px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;", :valign => "top"}
+                                                              %div{:style => "line-height: 150%; text-align: right;"}
+                                                                %span{:style => "font-size: 12px; font-family: 'Courier New', Courier; color: #ffffff; line-height: 150%;"}
+                                                                  %span{:style => "text-decoration: underline; line-height: 150%;"} www.openvagas.com
+                                %tr
+                                  %td.blk_container.bmeHolder.bmeBody{:align => "center", :bgcolor => "#ffffff", :name => "bmeBody", :style => "color: rgb(56, 56, 56); border: 0px none transparent; background-color: rgb(255, 255, 255);", :valign => "top", :width => "100%"}
+                                    #dv_15.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_divider", :style => "", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td.tblCellMain{:style => "padding: 10px 0px;"}
+                                              %table.tblLine{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-top-width: 0px; border-top-style: none; min-width: 1px;", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td
+                                                      %span
+                                    #dv_11.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_image", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td.bmeImage{:align => "center", :style => "border-collapse: collapse; padding: 20px;"}
+                                                      %img{:alt => "", :border => "0", :src => "https://benchmarkemail.com/images/templates_n/new_editor/Templates/Outdoors/Logo.png", :style => "max-width: 52px; display: block; width: 52px;", :width => "52"}/
+                                    #dv_17.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_text", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %table.bmeContainerRow{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td.tdPart{:align => "center", :valign => "top"}
+                                                      %table.tblText{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "tblText", :style => "float:left; background-color:transparent;", :width => "600"}
+                                                        %tbody
+                                                          %tr
+                                                            %td.tblCell{:align => "left", :name => "tblCell", :style => "padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;", :valign => "top"}
+                                                              %div{:style => "line-height: 150%; text-align: center;"}
+                                                                %span{:style => "font-size: 16px; font-family: 'Courier New', Courier; color: #464646; line-height: 150%;"}
+                                                                  %strong= "Olá #{@user.email}. Obrigado por se cadastrar."
+                                                                %br/
+                                                                %span{:style => "font-size: 14px; font-family: 'Courier New', Courier; color: #464646; line-height: 150%;"} Clique no botão abaixo para acessar nosso site.
+                                    #dv_18.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_button", :style => "", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td{:width => "20"}
+                                            %td{:align => "center"}
+                                              %table.tblContainer{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td{:height => "15"}
+                                                  %tr
+                                                    %td{:align => "center"}
+                                                      %a{:style => "color: rgb(66, 66, 66); text-decoration: none; cursor: pointer;", :target => "_blank"}
+                                                      %table.bmeButton{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: separate;"}
+                                                        %tbody
+                                                          %tr
+                                                            %td.bmeButtonText{:style => "border-radius: 0px; border: 3px solid rgb(0, 174, 84); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 15px 30px; font-weight: bold; border-collapse: separate;"}
+                                                              %span{:style => "font-family: 'Courier New', Courier; font-size: 14px; color: rgb(66, 66, 66);"}
+                                                                ACESSAR SITE
+                                                  %tr
+                                                    %td{:height => "15"}
+                                            %td{:width => "20"}
+                                    #dv_6.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_image", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td.bmeImage{:align => "center", :style => "border-collapse: collapse; padding: 20px 0px;"}
+                                                      %img.mobile-img-large{:alt => "", :border => "0", :src => "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80", :style => "max-width: 1200px; display: block; width: 600px;", :width => "600"}/
+                                    #dv_8.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_divider", :style => "", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td.tblCellMain{:style => "padding: 10px 20px;"}
+                                              %table.tblLine{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-top-width: 0px; border-top-style: none; min-width: 1px;", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td
+                                                      %span
+                                    #dv_20.blk_wrapper{:style => ""}
+                                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_text", :width => "600"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %table.bmeContainerRow{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                                %tbody
+                                                  %tr
+                                                    %td.tdPart{:align => "center", :valign => "top"}
+                        %tr
+                          %td.blk_container.bmeHolder{:align => "center", :bgcolor => "#ffffff", :name => "bmePreFooter", :style => "color: rgb(56, 56, 56); border: 0px none transparent; background-color: rgb(255, 255, 255);", :valign => "top", :width => "100%"}
+                            #dv_5.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_text", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td
+                                      %table.bmeContainerRow{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td.tdPart{:align => "center", :valign => "top"}
+                                              %table.tblText{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "tblText", :style => "float:left; background-color:transparent;", :width => "600"}
+                                                %tbody
+                                                  %tr
+                                                    %td.tblCell{:align => "left", :name => "tblCell", :style => "padding: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;", :valign => "top"}
+                                                      %div{:style => "line-height: 200%;"}
+                                                        %span{:style => "font-size: 14px; font-family: 'Courier New', Courier; color: #464646; line-height: 200%;"} Temos várias vagas para você. Encontre hoje mesmo a sua vaga.
+                            #dv_9.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_divider", :style => "", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td.tblCellMain{:style => "padding: 10px 20px;"}
+                                      %table.tblLine{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-top-width: 0px; border-top-style: none; min-width: 1px;", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %span
+                            #dv_12.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_image", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td
+                                      %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td.bmeImage{:align => "center", :style => "border-collapse: collapse; padding: 0px;"}
+                                              %img.mobile-img-large{:alt => "", :border => "0", :src => "https://benchmarkemail.com/images/templates_n/new_editor/Templates/Outdoors/Boots.jpg", :style => "max-width: 1200px; display: block; width: 600px;", :width => "600"}/
+                            #dv_7.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_text", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td
+                                      %table.bmeContainerRow{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td.tdPart{:align => "center", :style => "background-color: rgb(96, 84, 72);", :valign => "top"}
+                                              %table.tblText{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :name => "tblText", :style => "float: left; background-color: rgb(96, 84, 72);", :width => "600"}
+                                                %tbody
+                                                  %tr
+                                                    %td.tblCell{:align => "left", :name => "tblCell", :style => "padding: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;", :valign => "top"}
+                                                      %div{:style => "line-height: 150%; text-align: center;"}
+                                                        %span{:style => "font-size: 20px; font-family: 'Courier New', Courier; color: #ffffff; line-height: 150%;"} @openvagas para falar conosco no twitter!
+                            #dv_13.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_divider", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td.tblCellMain{:style => "padding: 10px 0px;"}
+                                      %table.tblLine{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-top-width: 0px; border-top-style: none; min-width: 1px;", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %span
+                            #dv_14.blk_wrapper{:style => ""}
+                            #dv_10.blk_wrapper{:style => ""}
+                              %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_divider", :width => "600"}
+                                %tbody
+                                  %tr
+                                    %td.tblCellMain{:style => "padding: 10px 0px;"}
+                                      %table.tblLine{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-top-width: 0px; border-top-style: none; min-width: 1px;", :width => "100%"}
+                                        %tbody
+                                          %tr
+                                            %td
+                                              %span
+                %tr
+                  %td.blk_container.bmeHolder{:align => "center", :bgcolor => "#ffffff", :name => "bmeFooter", :style => "color: rgb(102, 102, 102); border: 0px none transparent; background-color: rgb(255, 255, 255);", :valign => "top", :width => "100%"}
+                    #dv_3.blk_wrapper
+                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_permission", :style => "", :width => "600"}
+                        %tbody
+                          %tr
+                            %td.tblCell{:align => "left", :name => "tblCell", :style => "padding:20px;", :valign => "top"}
+                              %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                %tbody
+                                  %tr
+                                    %td{:align => "left", :name => "bmePermissionText", :style => "text-align:left;"}
+                                      %span{:style => "font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px;line-height: 140%;"}
+                                        %a{:href => "http://benchmarkemail.benchurl.com/c/v?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D", :style => "color: #16a7e0;", :target => "_new"} View this email in your browser
+                    #dv_16.blk_wrapper
+                      %table.blk{:border => "0", :cellpadding => "0", :cellspacing => "0", :name => "blk_footer", :style => "", :width => "600"}
+                        %tbody
+                          %tr
+                            %td.tblCell{:align => "left", :name => "tblCell", :style => "padding:20px;", :valign => "top"}
+                              %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                                %tbody
+                                  %tr
+                                    %td{:align => "left", :name => "bmeBadgeText", :style => "text-align:left; word-break: break-word;"}
+                                      %span#spnFooterText{:style => "font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px; line-height: 140%;"}
+                                        This message was sent to amilcar.cruz@benchmarkemail.com by benchmarkdesignsystem.gmail.com@email.benchmarkapps.com
+                                        = succeed "10621" do
+                                          %br/
+                                      %br/
+                                      %br/
+                                      %span{:style => "font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px; line-height: 140%;"}
+                                        %span{:href => "http://benchmarkemail.benchurl.com/c/su?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid="}
+                                          %img{:alt => "Unsubscribe from all mailings", :border => "0", :src => "https://www.benchmarkemail.com/images/verified.png", :title => "Unsubscribe from all mailings"}/
+                                        %a.bmefootertext{:href => "http://benchmarkemail.benchurl.com/c/su?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid=", :style => "color:inherit;text-decoration:underline;", :target => "_new"} Unsubscribe
+                                        |
+                                        %a.bmefootertext{:href => "http://benchmarkemail.benchurl.com/c/s?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid=", :style => "color:inherit;text-decoration:underline;", :target => "_new"} Manage Subscription
+                                        |
+                                        %a.bmefootertext{:href => "http://benchmarkemail.benchurl.com/c/f?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid=", :style => "color:inherit;text-decoration:underline;", :target => "_new"} Forward Email
+                                        |
+                                        %a.bmefootertext{:href => "http://benchmarkemail.benchurl.com/Abuse?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid=", :style => "color:inherit;text-decoration:underline;", :target => "_new"} Report Abuse
+                                        %br/
+                                  %tr
+                                    %td{:align => "left", :name => "bmeBadgeImage", :style => "text-align: left; padding-top: 20px; word-break: break-word;"}
+                                      %a{:href => "http://www.benchmarkemail.com?p=500289", :target => "_new"}
+                                        %img{:border => "0", :src => "https://www.benchmarkemail.com/images/web4/misc/emailfooter/opt12.png", :style => "max-width:144px;"}/
+%html
+  %img{:alt => "", :border => "0", :height => "1", :src => "http://benchmarkemail.benchurl.com/c/o?e=8E4B52&c=91CEA&t=1&l=7889F345&email=hL2iimIGZvj2QooSzVze1t7P%2FZjRPRKrj2c0%2B7DqUhU%3D&relid=", :style => "display:none;", :width => "1"}/
