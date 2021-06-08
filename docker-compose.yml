@@ -16,6 +16,8 @@ services:
       RAILS_ENV: development
     depends_on:
       - db
+    links:
+      - mailcatcher
   db:
     image: postgres:13.2-alpine
     volumes:
@@ -25,5 +27,11 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "127.0.0.1:5432:5432"
+  mailcatcher:
+    restart: on-failure:10
+    image: dockage/mailcatcher:0.7.1
+    ports:
+    - "1080:1080"
+    - "1025:1025"
 volumes:
   postgresql:
