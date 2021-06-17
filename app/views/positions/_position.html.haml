@@ -13,6 +13,7 @@
               = link_to 'Ver mais', public_position_path(position.slug), class: 'btn btn-danger'
               - if user_signed_in?
                 - if !UserApplicantQuery.new(current_user.id, position.id).call
-                  = link_to 'Candidatar-se', public_position_path(position.slug), class: 'btn btn-success'
+                  
+                  = link_to 'Candidatar-se', public_position_path(position.slug), {:remote => true, "data-target" => "#modal", "data-toggle" => "modal", 'data-backdrop' => 'static', 'data-keyboard' => 'false', class: 'btn btn-success'}
             .col-sm.text-right.mt-3.group-social-network
               = render partial: 'shared/social_network', locals: {position: position}

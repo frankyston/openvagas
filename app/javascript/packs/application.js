@@ -21,6 +21,9 @@ window.Swal = Swal
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
+
 $(function () {
   'use strict'
 
