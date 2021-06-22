@@ -1,2 +1,17 @@
-%h1 Applicants#index
-%p Find me in app/views/applicants/index.html.haml
+%h2= "Candidaturas da vaga: #{@position.name}"
+
+%table.table
+  %thead.thead-dark
+    %tr
+      %th{:scope => "col"} Nome
+      %th{:scope => "col"} E-mail
+      %th{:scope => "col"} Telefone
+      %th{:scope => "col"} Ações
+  %tbody
+    - @applicants.each do |applicant|
+      %tr
+        %th{:scope => "row"}= applicant.name
+        %td= applicant.email
+        %td= applicant.phone
+        %td
+          = link_to 'button', '#', class: 'btn btn-primary btn-sm'

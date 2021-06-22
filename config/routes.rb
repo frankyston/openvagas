@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'applicants/index'
-  get 'applicants/new'
   resources :companies, only: [:new, :edit, :update, :create]
-  resources :positions
-  resources :applicants, only: [:index, :new, :create]
+  resources :positions do
+    resources :applicants, only: [:index]
+  end
+  resources :applicants, only: [:new, :create]
   devise_for :users
   root "home#index"
   get "/vaga/:slug", action: :public_position, controller: :positions, as: :public_position

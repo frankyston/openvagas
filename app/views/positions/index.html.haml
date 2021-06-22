@@ -13,9 +13,9 @@
     - @positions.each do |position|
       %tr
         %th{:scope => "row"}= position.name
-        %td= position.career
-        %td= position.remote # aplicar helper
-        %td= position.contract
-        %td 1 (ver detalhes)
+        %td= career_name(position.career)
+        %td= modality(position) # aplicar helper
+        %td= contract_name(position.contract)
+        %td= link_to "Ver aplicações (#{position.applicants.count})", position_applicants_path(position), class: 'btn btn-warning btn-sm'
         %td
-          = link_to 'Editar', edit_position_path(position)
+          = link_to 'Editar', edit_position_path(position), class: 'btn btn-primary btn-sm'

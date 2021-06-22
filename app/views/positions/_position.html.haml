@@ -6,7 +6,7 @@
           = image_tag position.company.logo, alt: "Logo marca da empresa #{position.company.name}", class: 'card-img-top'
         .col-10
           %h4= position.name
-          %h5= "#{I18n.t('activerecord.attributes.position.careers')[position.career.to_sym]} - #{position.city} - #{I18n.t('activerecord.attributes.position.contracts')[position.contract.to_sym]}"
+          %h5= "#{career_name(position.career)} - #{position.city} - #{contract_name(position.contract)}"
           %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia porro ab, nihil quis earum ratione repudiandae, ipsam neque quidem iusto commodi ipsum dolor cumque repellat fugiat corporis voluptatibus eaque.
           .row
             .col-sm.mt-3
