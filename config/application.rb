@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-def set_locate_configs_and_timezone
+def set_locale_configs_and_timezone
   config.time_zone = 'Brasilia'
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/*.{rb,yml}').to_s]
   config.i18n.available_locales = ['pt-BR']
@@ -18,7 +18,7 @@ module OpenVagas
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    set_locate_configs_and_timezone
+    set_locale_configs_and_timezone
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
