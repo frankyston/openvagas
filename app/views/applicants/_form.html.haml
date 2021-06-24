@@ -3,4 +3,5 @@
   = f.input :name
   = f.input :email, input_html: { value: current_user.email } 
   = f.input :phone
+  = f.input :resume, as: :file, hint: 'Aceitamos somente arquivos PDF'
   = f.button :submit, 'Aplicar vaga', class: 'btn btn-primary'

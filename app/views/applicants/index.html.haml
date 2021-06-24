@@ -6,6 +6,7 @@
       %th{:scope => "col"} Nome
       %th{:scope => "col"} E-mail
       %th{:scope => "col"} Telefone
+      %th{:scope => "col"} Currículo
       %th{:scope => "col"} Ações
   %tbody
     - @applicants.each do |applicant|
@@ -13,5 +14,6 @@
         %th{:scope => "row"}= applicant.name
         %td= applicant.email
         %td= applicant.phone
+        %td= link_to 'Download', rails_blob_path(applicant.resume, disposition: "attachment"), class: 'btn btn-warning btn-sm'
         %td
-          = link_to 'button', '#', class: 'btn btn-primary btn-sm'
+          = link_to 'Exportar CSV', position_applicants_path(@position, format: 'csv'), class: 'btn btn-primary btn-sm'
