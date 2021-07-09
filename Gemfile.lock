@@ -381,6 +381,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.4)
   ransack
   rspec-rails
+  rubyzip
   sass-rails (>= 6)
   selenium-webdriver
   simple_form

@@ -1,4 +1,8 @@
-%h2= "Candidaturas da vaga: #{@position.name}"
+%h2
+  = "Candidaturas da vaga: #{@position.name}"
+  - if @applicants.size > 0
+    = link_to 'Exportar CSV', position_applicants_path(@position, format: 'csv'), class: 'btn btn-primary btn-sm'
+    = link_to 'Exportar Currículos', position_applicants_path(@position, format: 'zip'), class: 'btn btn-primary btn-sm'
 
 %table.table
   %thead.thead-dark
@@ -7,7 +11,6 @@
       %th{:scope => "col"} E-mail
       %th{:scope => "col"} Telefone
       %th{:scope => "col"} Currículo
-      %th{:scope => "col"} Ações
   %tbody
     - @applicants.each do |applicant|
       %tr
@@ -15,5 +18,3 @@
         %td= applicant.email
         %td= applicant.phone
         %td= link_to 'Download', rails_blob_path(applicant.resume, disposition: "attachment"), class: 'btn btn-warning btn-sm'
-        %td
-          = link_to 'Exportar CSV', position_applicants_path(@position, format: 'csv'), class: 'btn btn-primary btn-sm'

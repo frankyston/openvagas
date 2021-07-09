@@ -7,6 +7,11 @@ class ApplicantsController < ApplicationController
     respond_to do |format|
       format.html
       format.csv { send_data @position.applicants.as_csv }
+      format.zip do
+        UserMailer.export_resume(current_user, @position).deliver_now
+        flash[:success] = 'Currículos gerados com sucesso. Verifique seu e-mail.'
+        redirect_to action: :index
+      end
     end
   end
 

@@ -23,6 +23,7 @@ gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'ransack'
 #gem 'select2-rails'
+gem 'rubyzip'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
