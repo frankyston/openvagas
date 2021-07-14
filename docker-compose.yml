@@ -16,6 +16,7 @@ services:
       RAILS_ENV: development
     depends_on:
       - db
+      - redis
     links:
       - mailcatcher
   db:
@@ -33,5 +34,25 @@ services:
     ports:
     - "1080:1080"
     - "1025:1025"
+  redis:
+    image: redis:6.0.12-alpine
+    command: redis-server
+    volumes:
+      - redis:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+    logging:
+      driver: none
+  sidekiq:
+    image: openvagas_app
+    depends_on:
+      - app
+      - db
+      - redis
+    command: dotenv -f ".env.development" bundle exec sidekiq -C config/sidekiq.yml
+    env_file: .env.development
+    volumes:
+      - .:/usr/src/openvagas
 volumes:
   postgresql:
+  redis:

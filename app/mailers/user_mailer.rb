@@ -7,7 +7,8 @@ class UserMailer < ApplicationMailer
   end
 
   def export_resume(user, position)
-    @user = user
+    @user = User.find(user)
+    position = Position.find(position)
     zip_name = "#{SecureRandom.alphanumeric(10)}-curriculos.zip"
     ExportResume.new(user, position, zip_name).generate
     attachments[zip_name] = File.read(Rails.root.join('tmp', zip_name).to_s)
