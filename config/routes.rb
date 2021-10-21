@@ -1,6 +1,8 @@
 # frozen_string_literal: true
+require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
   resources :companies, only: [:new, :edit, :update, :create]
   resources :positions do
     resources :applicants, only: [:index]

@@ -1,0 +1,8 @@
+---
+:concurrency: <%= ENV['SIDEKIQ_WORKERS'] %>
+staging:
+  :concurrency: <%= ENV['SIDEKIQ_WORKERS'] %>
+production:
+  :concurrency: <%= ENV['SIDEKIQ_WORKERS'] %>
+:queues:
+  - mailers
