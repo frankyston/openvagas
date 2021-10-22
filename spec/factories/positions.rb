@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :position do
-    name { 'Vaga 1' }
+    name { Faker::Name.name }
     career { 2 }
     contract { 2 }
-    city { 'Fortaleza' }
-    state { 'CE' }
-    summary { 'Resumo da vaga' }
+    city { Faker::Address.city }
+    state { Faker::Address.state }
+    summary { Faker::Lorem.paragraph }
     company
   end
 end

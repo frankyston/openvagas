@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :company do
-    name { 'Empresa Legal' }
-    url { 'https://empresalegal.com' }
+    name { Faker::Company.name }
+    url { Faker::Internet.url }
     user
 
     trait :with_logo do
