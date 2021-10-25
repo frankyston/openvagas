@@ -36,6 +36,8 @@ group :development, :test do
   gem 'awesome_print'
   gem 'rspec-rails'
   gem 'solargraph'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -47,9 +49,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'database_cleaner-active_record'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
